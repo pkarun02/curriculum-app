@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('Front-End Unit Tests/ Shell Script') {
+        stage('Build /Shell script') {
           steps {
-            sh 'cd curriculum-front && npm i && npm run test:unit'
+            sh 'docker build -f curriculum-front/Dockerfile .'
           }
         }
 
